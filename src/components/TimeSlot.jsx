@@ -6,7 +6,7 @@ function TimeSlot({ time, label, isExpanded, isSelected, onClick, onDelete }) {
       {isExpanded ? (
         <div className="flex items-center px-4 py-2.5 mt-6 w-full text-xs bg-white rounded-md border border-sky-500 border-solid shadow-sm">
           <button
-            className="flex items-center text-red-500 hover:text-red-700 mr-4"
+            className="flex items-center mr-4 text-red-500 hover:text-red-700"
             onClick={(e) => {
               e.stopPropagation();
               onDelete();
@@ -30,10 +30,10 @@ function TimeSlot({ time, label, isExpanded, isSelected, onClick, onDelete }) {
             Delete
           </button>
           <div className="flex flex-col w-full">
-            <div className="flex justify-between text-black text-sm font-medium">
+            <div className="flex justify-between text-sm font-medium text-black">
               <div>{label || "No Label"}</div>
             </div>
-            <div className="text-neutral-500 text-xs">Time: {time}</div>
+            <div className="text-xs text-neutral-500">Time: {time}</div>
           </div>
         </div>
       ) : (

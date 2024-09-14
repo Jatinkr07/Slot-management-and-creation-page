@@ -36,7 +36,7 @@ const TimeSlotList = ({ selectedDate }) => {
   };
 
   return (
-    <div className="p-4 bg-white rounded-lg shadow-md max-w-md mx-auto">
+    <div className="max-w-md p-4 mx-auto bg-white rounded-lg shadow-md">
       {selectedDate ? (
         <DateDisplay date={format(selectedDate, "dd MMMM yyyy")} />
       ) : (

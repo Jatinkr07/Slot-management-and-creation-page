@@ -22,12 +22,12 @@ export default function Home() {
       <div className="flex flex-1">
         <Sidebar />
         <main className="flex-1 p-8 overflow-auto">
-          <div className="mb-6 flex justify-center">
+          <div className="flex justify-center mb-6">
             <ProgressBar />
           </div>
 
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <div className="flex justify-between items-center mb-6">
+          <div className="p-6 bg-white rounded-lg shadow-md">
+            <div className="flex items-center justify-between mb-6">
               <h2 className="text-xl font-semibold">Interview 1</h2>
               <button className="bg-[#00A3FF] text-white px-4 py-2 rounded-md text-sm">
                 View students
