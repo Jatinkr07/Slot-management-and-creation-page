@@ -1,0 +1,202 @@
+/* Import Tailwind CSS base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Global Styles */
+
+/* Body Styles */
+body {
+  @apply bg-[#F0F8FF] text-gray-900 font-sans;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+.container {
+  @apply mx-auto px-4;
+}
+
+
+header {
+  @apply bg-[#00A3FF] text-white p-4 flex justify-between items-center;
+}
+
+header .logo {
+  @apply text-2xl font-bold flex items-center gap-2;
+}
+
+header .icon-group {
+  @apply flex items-center space-x-4;
+}
+
+header .icon-group svg {
+  @apply w-5 h-5;
+}
+
+/* sidebar */
+aside {
+  @apply w-60 bg-white shadow-md p-4 h-full;
+}
+
+aside nav ul {
+  @apply space-y-2;
+}
+
+aside nav ul li a {
+  @apply flex items-center text-gray-600 hover:text-[#00A3FF] transition-colors duration-200;
+}
+
+aside .help {
+  @apply absolute bottom-4 left-4 flex items-center text-gray-600 hover:text-[#00A3FF];
+}
+
+
+main {
+  @apply flex-1 p-8;
+}
+
+main .content-heading {
+  @apply mb-6 flex justify-between items-center;
+}
+
+main .content-heading span {
+  @apply px-3 py-1 rounded-full text-sm;
+}
+
+main .content-heading .active {
+  @apply bg-green-100 text-green-800;
+}
+
+main .content-heading .inactive {
+  @apply bg-gray-200 text-gray-800;
+}
+
+main .form-container {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+main .form-container h2 {
+  @apply text-xl font-semibold mb-6;
+}
+
+
+main .date-picker {
+  @apply grid grid-cols-7 gap-2 mb-4;
+}
+
+main .date-picker button {
+  @apply p-2 text-center rounded-full transition-colors duration-200;
+}
+
+main .date-picker button.selected {
+  @apply bg-[#00A3FF] text-white;
+}
+
+main .date-picker button:not(.selected) {
+  @apply text-gray-700 hover:bg-gray-100;
+}
+
+
+main .time-slot-button {
+  @apply block w-full text-left px-4 py-2 rounded-md transition-colors duration-200;
+}
+
+main .time-slot-button.selected {
+  @apply bg-[#00A3FF] text-white;
+}
+
+main .time-slot-button:not(.selected) {
+  @apply bg-[#E6F4FF] text-[#00A3FF] hover:bg-[#CCE9FF];
+}
+
+
+form {
+  @apply space-y-4;
+}
+
+form label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+form select,
+form input {
+  @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00A3FF] focus:ring focus:ring-[#00A3FF] focus:ring-opacity-50;
+}
+
+form button {
+  @apply bg-[#00A3FF] text-white px-4 py-2 rounded-md text-sm;
+}
+
+
+@media (max-width: 1200px) {
+  .container {
+    @apply px-8;
+  }
+
+  aside {
+    @apply w-48;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .container {
+    @apply px-6;
+  }
+
+  aside {
+    @apply w-full;
+  }
+
+  main {
+    @apply p-6;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    @apply px-4;
+  }
+
+  aside {
+    @apply w-full fixed top-0 left-0 z-50 h-screen overflow-y-auto;
+  }
+
+  main {
+    @apply p-4;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 13px;
+  }
+
+  .container {
+    @apply px-2;
+  }
+
+  aside {
+    @apply w-full;
+  }
+
+  main {
+    @apply p-2;
+  }
+}
